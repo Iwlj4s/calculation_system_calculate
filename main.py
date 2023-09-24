@@ -1,10 +1,5 @@
 import tkinter as tk
 import customtkinter as CTk
-import from_two
-import from_eight
-import from_ten
-import from_sixteen
-
 import get_result
 
 
@@ -86,7 +81,8 @@ class App(ConversionApp):
         result = [get_result.get_res(value_from=self.from_var.get(), value_to=self.to_var.get(),
                                      number=self.user_number_entry.get())]
 
-        print(result)
+        self.result_entry.delete(0, "end")
+        self.result_entry.insert("end", result)
 
 
 if __name__ == '__main__':
